@@ -1,4 +1,7 @@
 # Hexo博客
+
+官网：https://hexo.io/zh-cn/
+
 ```
 npm install hexo-cli -g
 hexo init blog
@@ -16,8 +19,6 @@ hexo server
 >
 > npm install hexo-renderer-pug hexo-renderer-stylus --save 或者
 > yarn add hexo-renderer-pug hexo-renderer-stylus
-
-
 
 ### 本地搜索
 
