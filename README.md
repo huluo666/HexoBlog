@@ -19,8 +19,8 @@ hexo server
 
 
 
+### 本地搜索
+
 ```
 $ npm install hexo-generator-search --save
 ```
-
-## 
