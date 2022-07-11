@@ -25,3 +25,13 @@ hexo server
 ```sh
 $ npm install hexo-generator-search --save
 ```
+
+
+
+
+
+自动化部署
+
+`Error: Need phone captcha validation, please follow wechat official account "Gitee" to bind account to turn off authentication.`
+
+微信公众号关注Gitee，绑定Gitee账号就可以了。
