@@ -139,6 +139,14 @@ date: 2017-05-03 14:09:00
 
 
 
+```
+title: 使用Hexo创建文章、标签和分类
+date: 2022-07-11 17:39:44
+categories: [iOS, Python]
+```
+
+
+
 ### 插件
 
 https://hexo.io/plugins/
@@ -149,6 +157,39 @@ hexo clean && hexo g && hexo s
 
 
 
+### Gitee自动化部署gitee pages
+
+Gitee Pages 的访问速度很快，但无法GitHub Pages那样自动更新Pages，因为 Gitee 的自动部署属于 Gitee Pages Pro 的服务。
+
+详细操作:https://github.com/marketplace/actions/gitee-pages-action
+
+GitHub Actions：https://docs.github.com/cn/actions
+
+## 前提
+
+### 创建所需仓库
+
+1. 创建 `blog` 仓库用来存放 Hexo 项目
+2. 创建 `your.github.io` 仓库用来存放静态博客页面
+
+
+
+
+
+## 创建工作流配置
+
+
+
+
+
+
+
+
+
+
+
 参考文章
 
 https://juejin.cn/post/7011765438262558727
+
+https://sanonz.github.io/2020/deploy-a-hexo-blog-from-github-actions/
