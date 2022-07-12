@@ -23,7 +23,7 @@ Mac 有两种方式可以添加定时任务：
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.github.autocommit.plist</string>
+	<string>com.git.autosync</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/Users/demo/run.sh</string>
@@ -42,25 +42,25 @@ Mac 有两种方式可以添加定时任务：
 ### 3. 加载命令
 
 ```
-launchctl load -w com.github.autocommit.plist
+launchctl load -w com.git.autosync.plist
 ```
 
 
 
 ```
 // 加载任务
-$ launchctl load -w com.github.autocommit.plist
+$ launchctl load -w com.git.autosync.plist
 
 // 删除任务
-$ launchctl unload com.github.autocommit.plist
+$ launchctl unload com.git.autosync.plist
 
 // 查看任务列表, 使用 grep '任务部分名字' 过滤
-$ launchctl list | grep 'com.github.autocommit.plist'
+$ launchctl list | grep 'com.git.autosync.plist'
 
 // 开始
-$ launchctl start com.github.autocommit.plist
+$ launchctl start com.git.autosync.plist
 
 // 停止
-$ launchctl stop com.github.autocommit.plist
+$ launchctl stop com.git.autosync.plist
 ```
 
