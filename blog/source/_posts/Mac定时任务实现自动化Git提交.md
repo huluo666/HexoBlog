@@ -55,7 +55,7 @@ $ launchctl load -w com.git.autosync.plist
 $ launchctl unload com.git.autosync.plist
 
 // 查看任务列表, 使用 grep '任务部分名字' 过滤
-$ launchctl list | grep 'com.git.autosync.plist'
+$ launchctl list | grep 'com.git.autosync'
 
 // 开始
 $ launchctl start com.git.autosync.plist
@@ -64,3 +64,6 @@ $ launchctl start com.git.autosync.plist
 $ launchctl stop com.git.autosync.plist
 ```
 
+
+
+http://www.wu.run/2019/03/27/mac-launchctl-guidance/
