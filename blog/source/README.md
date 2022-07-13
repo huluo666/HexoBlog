@@ -24,6 +24,15 @@ $ hexo deploy --generate  或 hexo g -d or hexo d -g
 `hexo new [layout] <title>`
 新建一篇新文章，会自动按照模板里面的格式创建文章
 
+另外如果不想要每次新增文章都要輸入一次 “categories:” 與 “tags”，可以修改 scaffolds/post.md
+
+```
+title: {{ title }}
+date: {{ date }}
+categories: {{ categories }}
+tags: {{ tags }}
+```
+
 里面的布局（layout），默认为 post，布局共有三种：
 
 ```
