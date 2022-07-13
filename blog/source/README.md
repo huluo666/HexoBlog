@@ -48,6 +48,8 @@ draft	source/_drafts
 
 ```
 $ hexo n text1
+
+#该命令创建了一个使用特定布局的名为draft1的文章。
 $ hexo n [layout_name] draft1 
 
 ```
