@@ -17,8 +17,8 @@ hexo server
 一键本地启动：hexo clean && hexo g && hexo s
 一键部署：hexo clean && hexo g && hexo d
 $ hexo deploy --generate  或 hexo g -d or hexo d -g
-
 $ hexo g -d
+$ hexo d -g
 ```
 
 ## 创建和发布文章
