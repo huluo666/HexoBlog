@@ -49,9 +49,12 @@ draft	source/_drafts
 ```
 $ hexo n text1
 
-#该命令创建了一个使用特定布局的名为draft1的文章。
-$ hexo n [layout_name] draft1 
 
+$ hexo n [layout_name] draft1 
+#该命令创建了一个使用特定布局的名为draft1的文章。
+
+$ hexo n draft draft1
+#命令将在source\目录下创建_drafts目录，并生成一个draft1.md文件。
 ```
 
 
