@@ -21,3 +21,10 @@ Press any key to continue...
 ? Which vite template would you like to use? vue
 ```
 
+调试
+
+```
+$ cd AutoTask
+$ npm run tauri dev
+```
+
