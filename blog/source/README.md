@@ -39,7 +39,18 @@ tags: {{ tags }}
 post	source/_posts
 page	source
 draft	source/_drafts
+
+
+
 ```
+
+创建文章命令
+
+```
+hexo n text1
+```
+
+
 
 > WARNING
 >
