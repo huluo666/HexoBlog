@@ -47,7 +47,9 @@ draft	source/_drafts
 创建文章命令
 
 ```
-hexo n text1
+$ hexo n text1
+$ hexo n [layout_name] draft1 
+
 ```
 
 
