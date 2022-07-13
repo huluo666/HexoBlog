@@ -11,7 +11,11 @@ tags:
 
 https://www.rust-lang.org/zh-CN/learn/get-started
 
-
+```
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+$ rust --version
+$ rustup update stable
+```
 
 
 
@@ -31,6 +35,15 @@ Press any key to continue...
 
 ```
 $ cd AutoTask
-$ npm run tauri dev
+$ npm run tauri dev #调试
+$ npm run tauri build #打包
+
 ```
 
+
+
+https://element-plus.gitee.io/zh-CN/guide/installation.html
+
+```
+$ npm install element-plus --save
+```
