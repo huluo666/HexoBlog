@@ -10,6 +10,8 @@ tags:
 
 
 ```sh
+$ npm create tauri-app
+
 Press any key to continue...
 ? What is your app name? AutoTask
 ? What should the window title be? 自动任务
