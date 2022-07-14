@@ -62,10 +62,20 @@ $ launchctl start com.git.autosync.plist
 
 // 停止-停止任务。如果将任务已经是运行状态，则作业可能会立即重新启动。
 $ launchctl stop com.git.autosync.plist
-
-
 ```
 
 
+
+```sh
+launchctl remove：从launchd中异步删除任务，在返回之前它不会等待作业实际停止，因此不会对任何错误做处理
+launchctl unload：停止并卸载任务，但该任务仍将在下次登录/重新启动时重新启动
+launchctl unload -w <路径>：停止并卸载和禁用任务。该任务将不会在下次登录/重新启动时重新启动。
+
+其他几个相关命令
+
+launchctl stop：停止任务。如果将任务已经是运行状态，则作业可能会立即重新启动。
+launchctl load <路径>：只要未“禁用”该任务，就加载并启动任务。
+launchctl load -w <路径>：加载并启动任务，同时还将任务标记为“未禁用”。任务将在下次登录/重新启动时重新启动。
+```
 
 http://www.wu.run/2019/03/27/mac-launchctl-guidance/
