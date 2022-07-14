@@ -60,8 +60,10 @@ $ launchctl list | grep 'com.git.autosync'
 // 开始
 $ launchctl start com.git.autosync.plist
 
-// 停止
+// 停止-停止任务。如果将任务已经是运行状态，则作业可能会立即重新启动。
 $ launchctl stop com.git.autosync.plist
+
+
 ```
 
 
