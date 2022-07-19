@@ -50,6 +50,10 @@ $ npm install element-plus --save
 
 
 
+API文档：https://tauri.app/v1/api/js/modules/app
+
+
+
 https://github.com/kenethrrizzo/learning-rust/search?q=show_city
 
 https://github.com/datayang/tauri_demo
