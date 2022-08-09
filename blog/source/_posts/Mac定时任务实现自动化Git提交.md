@@ -275,3 +275,13 @@ WorkingDirectory
 ```
 
 https://imchenway.com/2021/02/24/Mac%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/
+
+
+
+
+
+## 注意事项
+
+脚本不执行
+
+1、无权限 
