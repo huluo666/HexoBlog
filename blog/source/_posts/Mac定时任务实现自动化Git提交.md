@@ -197,7 +197,7 @@ http://www.wu.run/2019/03/27/mac-launchctl-guidance/
 >  2、Program：要运行的程序；
 >  3、ProgramArguments：命令语句
 >  4、StartCalendarInterval：运行的时间，单个时间点使用dict，多个时间点使用 array <dict>
->  5、StartInterval：时间间隔，与StartCalendarInterval使用其一，单位为秒
+>  5、StartInterval：时间间隔，与StartCalendarInterval使用其一，单位为秒，设置执行的时间间隔，单位为秒
 
 
 
@@ -267,8 +267,11 @@ http://www.wu.run/2019/03/27/mac-launchctl-guidance/
 $ launchctl start com.test.task.plist
 ```
 
+WorkingDirectory
 
+```
+          cmdStr: `${publicDirPath}/Autotask.py --bunldeid ${Bunlde_ID} --startinterval ${StartInterval} --scriptpath ${this.Script_Path}`
 
-
+```
 
 https://imchenway.com/2021/02/24/Mac%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/
