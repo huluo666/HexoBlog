@@ -286,4 +286,28 @@ Python脚本不执行原因
 
 1、无权限 
 
-2、含有第三方库（如:import click）
+```
+$ chmod 777 task.py
+```
+
+2、正常编译
+
+```
+在上述的例子中，python脚本文件最开始的部分有两行说明：
+
+#!/usr/bin/env python			// 声明编译环境，即指定编译器
+# -*- coding:utf-8 -*-				// 编码问题
+```
+
+3、含有第三方库（如:import click）
+
+
+
+4、验证脚本的正确性
+
+你可以将执行时间设置为较近的时间，也可以使用下面语句直接执行一次脚本：
+
+```
+// 开始
+$ launchctl start com.test.task.plist
+```
