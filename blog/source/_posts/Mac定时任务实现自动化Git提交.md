@@ -70,7 +70,7 @@ plist脚本一般存放在以下目录：
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.git.autosync</string>
+	<string>com.autotask.default</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/Users/demo/run.sh</string>
@@ -89,26 +89,24 @@ plist脚本一般存放在以下目录：
 ### 3. 加载命令
 
 ```
-launchctl load -w com.git.autosync.plist
+launchctl load -w com.autotask.default.plist
 ```
 
-
-
-```
+```sh
 // 加载任务
-$ launchctl load -w com.git.autosync.plist
+$ launchctl load -w com.autotask.default.plist
 
 // 删除任务
-$ launchctl unload com.git.autosync.plist
+$ launchctl unload com.autotask.default.plist
 
 // 查看任务列表, 使用 grep '任务部分名字' 过滤
-$ launchctl list | grep 'com.git.autosync'
+$ launchctl list | grep 'com.autotask.default'
 
 // 开始
-$ launchctl start com.git.autosync.plist
+$ launchctl start com.autotask.default.plist
 
 // 停止-停止任务。如果将任务已经是运行状态，则作业可能会立即重新启动。
-$ launchctl stop com.git.autosync.plist
+$ launchctl stop com.autotask.default.plist
 ```
 
 
@@ -131,7 +129,7 @@ http://www.wu.run/2019/03/27/mac-launchctl-guidance/
 
 
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>  
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">  
 <plist version="1.0">  
@@ -280,6 +278,17 @@ https://imchenway.com/2021/02/24/Mac%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9A%E6%97%B
 
 
 
+```
+总结一下
+虽然plist的设置会复杂很多。但是当前在mac os还是倾向于推荐使用Plist的方法，crontab已不推荐使用。
+两者的区别：
+1、plist可以设置到秒，而crontab只能到分钟。
+2、plist可以同时应用于Mac OS/Iphone。
+3、plist对于MAC上系统交互的操作更支持(我就出现过用crontab设置，运行时出现execution error: 不允许用户交互。 (-1713)的错误)
+```
+
+
+
 ## 注意事项
 
 Python脚本不执行原因
@@ -301,9 +310,9 @@ $ chmod 777 task.py
 
 3、含有第三方库（如:import click）
 
+4、plist文件中的路径以及脚本中的路径都必须是绝对路径
 
-
-4、验证脚本的正确性
+5、验证脚本的正确性
 
 你可以将执行时间设置为较近的时间，也可以使用下面语句直接执行一次脚本：
 
