@@ -1,23 +1,21 @@
-name: Hexo Deploy GitHub Pages
+name: 部署 GitHub Pages
 on:
   push:
-    branches:[main]
-    
+    branches:
+      - main # 源码库的分支，该分支有提交时，就出发该action
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@master
 
-    - name: Build and Deploy
-      uses: theme-keep/hexo-deploy-github-pages-action@master
-      env:
-        # Your GitHub Token
-        PERSONAL_TOKEN: ${{ secrets.GIT_PASSWORD }}
-
-        # The repository the action should deploy to
-        PUBLISH_REPOSITORY: huluo666/huluo666.github.io
+      - name: Build and Deploy
+        # 使用专门部署 Hexo 到 GitHub pages 的 action（可以fork后根据需要修改）
+        uses: xjshi/hexo-deploy-github-pages-action@master
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GIT_PASSWORD }} # secret 名，需要跟源码库设置中添加的secret名一致。
+          PUBLISH_REPOSITORY: huluo666/huluo666.github.io # 网页库，格式：用户名/仓库名
+          BRANCH: master # 构建后的网页要推送到网页库的分支
+          PUBLISH_DIR: ./public # 部署 public 目录下的文件，hexo 一般都是这个目录，可根据实际调整
