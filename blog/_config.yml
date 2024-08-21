@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://huluo666.gitee.io
+url: http://huluo666.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -32,6 +32,7 @@ skip_render:
   - "README.md"
   - ".github/**/**"
 
+
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -45,15 +46,14 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+syntax_highlighter: highlight.js
 highlight:
-  enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
   preprocess: true
   line_number: true
   tab_replace: ''
@@ -93,7 +93,6 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
-  - ".github/**/**" #允许
 exclude:
 ignore:
 
@@ -104,7 +103,6 @@ theme: melody
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-# 其中 xxxxxx 是前面多次用到的你的GitHub用户名，注意是master分支
 deploy:
   # - type: git
   #   repo: https://gitee.com/huluo666/huluo666.git
@@ -113,5 +111,3 @@ deploy:
     repo: git@github.com:huluo666/huluo666.github.io.git
     branch: master
     ignore_hidden: false  # 加了这么一个配置
-
-  
